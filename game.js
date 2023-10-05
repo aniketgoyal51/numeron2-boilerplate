@@ -122,10 +122,11 @@ function startTimer(){
     timer.innerHTML=time;
     timeId = setInterval(()=>{
         time--;
-        if(timer==0) location.href="gameover.html?score="+score;
+        if(time===0) {
+            location.href="gameover.html?score="+score;
+        }
         timer.innerHTML=time;
-    },1000
-    )
+    },1000)
     
 }
 function resetTimer(IntervalID){
